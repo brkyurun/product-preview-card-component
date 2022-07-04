@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  height: 100vh;
+}
+
+.card {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.card__body__category {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 4px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+.card__body__title {
+  color: black;
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+.card__body__paragraph {
+  color: var(--dark-grayish-blue);
+  font: 13px/1.8 "Montserrat", sans-serif;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  margin-top: 2.75rem;
+}
+
+.card__price > h1 {
+  font: bold 2.325rem "Fraunces", serif;
+  color: var(--dark-cyan);
+}
+
+.card__price > span {
+  display: block;
+  margin-left: 1.325rem;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: white;
+  font: normal 1rem "Montserrat", sans-serif;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+.card__button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.card__button > img {
+  margin-right: 0.6rem;
+}
+
+@media (min-width: 900px) {
+  .card {
+    display: flex;
+    height: 60%;
+    max-width: 50%;
+  }
+
+  .card__image {
+    height: 100%;
+    flex: 1;
+  }
+
+  .card__body > *,
+  .card__price > * {
+    margin: 2rem 1rem;
+  }
+
+  .card__button {
+    margin: 0 auto;
+  }
+}
